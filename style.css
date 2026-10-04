@@ -1,0 +1,241 @@
+body {
+    text-align: center;
+    font-family: Arial;
+    /*background: #92BE5E /**#0A3323**/ /*#68b576*/;
+    background: linear-gradient(
+        155deg,
+        #5F9368 10%,
+        #9DB783 60%,
+        #F2D5D1 80%
+    );
+    color: /*#0c661b*/#575527;
+    min-height: 100vh;
+}
+h1 {
+    margin-top: 50px;
+    font-size: 50px;
+    color: #575527;
+}
+.pilihan {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+
+}
+button{
+    width: 200px;
+    padding: 15px;
+
+    background-color: #FFFDF7;
+    color: /*#1b6626*/ #575527;
+    border-radius: 15px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 12px rgba(70, 110, 80, 0.15);
+}
+button img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+button p {
+    margin: 8px 0 0 ;
+    font-size: 20px;
+    font-weight: bold;
+    color: /*#1d602d*/ #575527;
+}
+button:hover{
+    background-color: /*#fce8ef*/ #ECC4C3;
+    /*background-color: #fcbed2;*/
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 18px rgba(70, 110, 80, 0.2);
+}
+#areaGame {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    margin: 30px auto;
+}
+
+#papan {
+    display: grid;
+    margin: 0;
+    width: 350px;
+    height: 350px;
+
+    background-color: #F7F4D5;
+    border: 3px solid #575527;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 18px rgba(53, 94, 59, 0.18);
+}
+.kotak{
+    border: 1px solid #B9707B;
+    background-color: #FFFDF7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    font-size: 25px;
+    color: #575527;
+
+    transition: all 0.2s ease;
+}
+
+.catatanKotak {
+    position: absolute;
+    inset: 2px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    pointer-events: none;
+    font-size: 10px;
+    line-height: 1;
+    color: #777;
+}
+
+.catatanKotak span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#kontrolAngka {
+    width: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#angka{
+    display: grid;
+    grid-template-columns: repeat(2, 45px);
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin: 0;
+}
+
+#angka button{
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    font-size: 18px;
+    cursor: pointer;
+
+    background-color: #FFFDF7;
+    color: #355E3B;
+
+    border: 2px solid #6F9678;
+    border-radius: 10px;
+
+    transition: all 0.25s ease;
+}
+
+#angka button:hover {
+    background-color: #ECC4C3;
+    transform: translateY(-2px);
+}
+
+#tombolCatatan {
+    width: 100px;
+    padding: 10px 6px;
+    font-size: 14px;
+    border: 2px solid #6F9678;
+    background-color: #FFFDF7;
+    color: #355E3B;
+}
+
+#tombolCatatan.aktif {
+    background-color: #A8D5B5;
+    border-color: #4E805B;
+}
+
+@media (max-width: 600px) {
+    #areaGame {
+        gap: 12px;
+    }
+
+    #papan {
+        width: min(70vw, 350px);
+        height: min(70vw, 350px);
+    }
+
+    #kontrolAngka {
+        width: 92px;
+    }
+
+    #angka {
+        grid-template-columns: repeat(2, 38px);
+        gap: 6px;
+    }
+
+    #angka button {
+        width: 38px;
+        height: 38px;
+    }
+
+    #tombolCatatan {
+        width: 88px;
+        font-size: 12px;
+    }
+}
+
+/*pop up*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.popupIsi {
+     background: linear-gradient(
+        145deg,
+        #ffffff,
+        #effff4
+    );
+    width: 400px;
+    padding: 30px;
+    border: 2px solid black;
+    text-align: center;
+
+    border-radius: 15px;
+}
+
+.popupIsi h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.popupIsi button {
+    width: 200px;
+    margin: 8px auto;
+    padding: 12px;
+    display: block;
+}

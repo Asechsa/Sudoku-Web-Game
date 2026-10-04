@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game Sudoku</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <button id="keluar"> ← Keluar</button>
+
+        <h1>Sudoku</h1>
+
+        <p id="ukuran">Sudoku</p>
+
+        <p id="salah">Salah: 0/5</p>
+
+        <div id="areaGame">
+            <div id="papan"></div>
+
+            <div id="kontrolAngka">
+                <div id="angka"></div>
+                <button id="tombolCatatan" type="button">✏️ Catatan: OFF</button>
+            </div>
+        </div>
+
+        <div id="pesanGameOver" class="popup">
+            <div class="popupIsi">
+                <h2>😔 Kesempatan Habis!</h2>
+                <p>Kamu sudah melakukan 5 kesalahan.</p>
+                <button id="restartSudoku" type="button">Restart Sudoku</button>
+            </div>
+        </div>
+
+        <div id="pesanSelesai" class="popup">
+            <div class="popupIsi">
+            <h2>🎉 Sudoku Selesai! </h2>
+            <button id="lanjut">Lanjut</button>
+            <button id ="keMenu">Kembali ke Menu</button>
+            </div>    
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
